@@ -168,8 +168,8 @@ export const Table = <T extends object>({
   } = usePagination(filteredDatas);
 
   return (
-    <div className={styles.table}>
-      <section className={styles.tableHeader}>
+    <div className="react-table">
+      <section className="tableHeader">
         <SelectPageLength
           range={range}
           pageLength={pageLength}
@@ -185,7 +185,7 @@ export const Table = <T extends object>({
         />
         <TableBody datas={pageDatas} fields={fields} />
       </table>
-      <section className={styles.tableFooter}>
+      <section className="tableFooter">
         <TableLength
           length={datas.length}
           maxPageItem={maxPageItem}

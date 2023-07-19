@@ -41,29 +41,27 @@ const usePagination = <T extends object>(datas: T[]) => {
   };
 };
 
-export type field = {
+export type columns = {
   param: string;
   label: string;
-  type?: string;
-  options?: SelectOption[];
 };
 
 type TableProps<T> = {
-  fields: field[];
+  columns: columns[];
   datas: T[];
   range?: number[];
 };
 
 const TableBody = <T extends object>({
   datas,
-  fields,
+  columns,
 }: Omit<TableProps<T>, "range">) => {
   return (
     <tbody>
-      {datas.map((item: any, key) => (
+      {datas.map((item: T, key) => (
         <tr key={key}>
-          {fields.map(({ param }) => (
-            <td key={param}>{item[param]}</td>
+          {columns.map(({ param }) => (
+            <td key={param}>{item[param as keyof typeof item]}</td>
           ))}
         </tr>
       ))}
@@ -74,7 +72,7 @@ const TableBody = <T extends object>({
 const useSearch = <T extends object>(datas: T[]) => {
   const [search, setSearch] = useState("");
 
-  const filteredDatas = datas.filter((item: any) => {
+  const filteredDatas = datas.filter((item: T) => {
     const values = Object.values(item).join(" ").toLowerCase();
     return values.includes(search.toLowerCase());
   });
@@ -101,8 +99,8 @@ const useSort = <T extends object>(datas: T[]) => {
     }
 
     const sortData = [...datas].sort((a: T, b: T) => {
-      a = a[definition.param].toLowerCase();
-      b = b[definition.param].toLowerCase();
+      a = a[definition.param as keyof typeof a];
+      b = b[definition.param as keyof typeof b];
 
       if (a < b) {
         return -1;
@@ -149,7 +147,7 @@ const useSort = <T extends object>(datas: T[]) => {
 };
 
 export const Table = <T extends object>({
-  fields,
+  columns,
   datas = [],
   range,
 }: TableProps<T>) => {
@@ -178,11 +176,11 @@ export const Table = <T extends object>({
       </section>
       <table>
         <TableHead
-          fields={fields}
+          columns={columns}
           sortedDefinition={sorted.definition}
           handleSort={handleSort}
         />
-        <TableBody datas={pageDatas} fields={fields} />
+        <TableBody datas={pageDatas} columns={columns} />
       </table>
       <section className="tableFooter">
         <TableLength

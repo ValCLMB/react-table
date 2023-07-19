@@ -1,5 +1,5 @@
 import { HeaderCell } from "./HeaderCell";
-import { field } from "../Table";
+import { columns } from "../Table";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 export type SortedDefinition = {
@@ -9,24 +9,24 @@ export type SortedDefinition = {
 } | null;
 
 type TableHeadProps = {
-  fields: field[];
+  columns: columns[];
   sortedDefinition: SortedDefinition;
   handleSort: (value: string) => void;
 };
 
 export const TableHead = ({
-  fields,
+  columns,
   sortedDefinition,
   handleSort,
 }: TableHeadProps) => {
   return (
     <thead className="tableHead">
       <tr className="tableHeadRow">
-        {fields.map((field) => (
+        {columns.map((col) => (
           <HeaderCell
-            key={field.param}
-            label={field.label}
-            param={field.param}
+            key={col.param}
+            label={col.label}
+            param={col.param}
             sortedDefinition={sortedDefinition}
             handleSort={handleSort}
           />

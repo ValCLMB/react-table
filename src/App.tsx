@@ -7,7 +7,7 @@ const employeeFieldsTable = [
 function App() {
   return (
     <>
-      <Table fields={employeeFieldsTable} datas={[]} />
+      <Table columns={employeeFieldsTable} datas={[]} />
     </>
   );
 }

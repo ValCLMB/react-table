@@ -1,3 +1,4 @@
+import "./Table.css";
 import { faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Pagination } from "./Pagination/Pagination";

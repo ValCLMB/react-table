@@ -1,7 +1,3 @@
-.react-table {
-  width: 70%;
-  margin: auto;
-}
 .react-table table {
   width: 100%;
   border-collapse: collapse;
@@ -13,7 +9,7 @@
   padding: 10px;
 }
 
-.react-table tableFooter {
+.react-table .tableFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,9 +1,10 @@
 # valclmb-react-table
 
-###Installation
+### Installation
+
 `npm install valclmb-react-table`
 
-###Basic usage
+### Basic usage
 
 ```
 import {Table} from "valclmb-react-table"
@@ -11,7 +12,7 @@ import {Table} from "valclmb-react-table"
 <Table fields={fields} datas={datas}/>
 ```
 
-###Props
+### Props
 
 | Name    | Description                                                                      | Format                             | Exemple                                                                               |
 | ------- | -------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------- |

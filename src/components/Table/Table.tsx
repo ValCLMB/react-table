@@ -1,7 +1,6 @@
 import { faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Pagination } from "./Pagination/Pagination";
-import styles from "./Table.module.css";
 import { SortedDefinition, TableHead } from "./TableHead/TableHead";
 import { SearchInput } from "./TableHeader/SearchInput";
 import { SelectPageLength } from "./TableHeader/SelectPageLength";
@@ -101,7 +100,7 @@ const useSort = <T extends object>(datas: T[]) => {
       return;
     }
 
-    const sortData = [...datas].sort((a: any, b: any) => {
+    const sortData = [...datas].sort((a: T, b: T) => {
       a = a[definition.param].toLowerCase();
       b = b[definition.param].toLowerCase();
 

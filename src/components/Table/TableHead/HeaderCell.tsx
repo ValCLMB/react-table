@@ -1,4 +1,3 @@
-import styles from "./TableHead.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSort } from "@fortawesome/free-solid-svg-icons";
 import { SortedDefinition } from "./TableHead";
@@ -20,8 +19,8 @@ export const HeaderCell = ({
       : faSort;
 
   return (
-    <th onClick={() => handleSort(param)} className={styles.tableHeadCell}>
-      <div className={styles.tableHeadCellContent}>
+    <th onClick={() => handleSort(param)} className="tableHeadCell">
+      <div className="tableHeadCellContent">
         {label}
         <FontAwesomeIcon icon={icon} />
       </div>

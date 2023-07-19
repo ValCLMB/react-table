@@ -1,4 +1,3 @@
-import styles from "./TableHead.module.css";
 import { HeaderCell } from "./HeaderCell";
 import { field } from "../Table";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -21,8 +20,8 @@ export const TableHead = ({
   handleSort,
 }: TableHeadProps) => {
   return (
-    <thead className={styles.tableHead}>
-      <tr className={styles.tableHeadRow}>
+    <thead className="tableHead">
+      <tr className="tableHeadRow">
         {fields.map((field) => (
           <HeaderCell
             key={field.param}

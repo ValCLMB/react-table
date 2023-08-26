@@ -1,45 +1,17 @@
 import "./Table.css";
-import { faSortDown, faSortUp } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
 import { Pagination } from "./Pagination/Pagination";
-import { SortedDefinition, TableHead } from "./TableHead/TableHead";
+import { TableHead } from "./TableHead/TableHead";
 import { SearchInput } from "./TableHeader/SearchInput";
 import { SelectPageLength } from "./TableHeader/SelectPageLength";
 import { TableLength } from "./Pagination/TableLength";
+import { usePagination } from "../../hooks/usePagination";
+import { useSort } from "../../hooks/useSort";
+import { useSearch } from "../../hooks/useSearch";
+import { TableBody } from "./TableBody/TableBody";
 
 export type SelectOption = {
   label: string;
   value: string;
-};
-
-const usePagination = <T extends object>(datas: T[]) => {
-  const [pageLength, setPageLength] = useState(10);
-  const [currentPage, setCurrentPage] = useState(1);
-  // Calculate the min and max item for the current page
-  const maxPageItem = currentPage * pageLength;
-  const minPageItem = maxPageItem - pageLength + 1;
-  // Calculate the number of pages
-  const numberOfPages = Math.ceil(datas.length / pageLength);
-
-  // Set the datas for the current page
-  const pageDatas = datas.slice(minPageItem - 1, maxPageItem);
-
-  // Handle the change of page length
-  const changePageLength = (value: string) => {
-    setPageLength(parseInt(value));
-    setCurrentPage(1);
-  };
-
-  return {
-    pageDatas,
-    pageLength,
-    changePageLength,
-    currentPage,
-    setCurrentPage,
-    minPageItem,
-    maxPageItem,
-    numberOfPages,
-  };
 };
 
 export type columns = {
@@ -47,104 +19,10 @@ export type columns = {
   label: string;
 };
 
-type TableProps<T> = {
+export type TableProps<T> = {
   columns: columns[];
   datas: T[];
   range?: number[];
-};
-
-const TableBody = <T extends object>({
-  datas,
-  columns,
-}: Omit<TableProps<T>, "range">) => {
-  return (
-    <tbody>
-      {datas.map((item: T, key) => (
-        <tr key={key}>
-          {columns.map(({ param }) => (
-            <td key={param}>{item[param as keyof typeof item]}</td>
-          ))}
-        </tr>
-      ))}
-    </tbody>
-  );
-};
-
-const useSearch = <T extends object>(datas: T[]) => {
-  const [search, setSearch] = useState("");
-
-  const filteredDatas = datas.filter((item: T) => {
-    const values = Object.values(item).join(" ").toLowerCase();
-    return values.includes(search.toLowerCase());
-  });
-
-  return { filteredDatas, setSearch };
-};
-type Sorted<T> = {
-  definition: SortedDefinition;
-  datas: T[];
-};
-
-const useSort = <T extends object>(datas: T[]) => {
-  const [sorted, setSorted] = useState<Sorted<T>>({
-    definition: null,
-    datas,
-  });
-
-  const { definition } = sorted;
-
-  useEffect(() => {
-    if (definition === null) {
-      setSorted((curr) => ({ ...curr, datas }));
-      return;
-    }
-
-    const sortData = [...datas].sort((a: T, b: T) => {
-      a = a[definition.param as keyof typeof a];
-      b = b[definition.param as keyof typeof b];
-
-      if (a < b) {
-        return -1;
-      }
-      if (a > b) {
-        return 1;
-      }
-      return 0;
-    });
-
-    const direction = definition.direction;
-
-    if (direction === "desc") {
-      sortData.reverse();
-    }
-
-    setSorted((curr) => ({ ...curr, datas: sortData }));
-  }, [datas, definition]);
-
-  const handleSort = (param: string) => {
-    setSorted((curr) => {
-      if (curr.definition === null || param !== curr.definition.param) {
-        return {
-          ...curr,
-          definition: { param, direction: "asc", icon: faSortUp },
-        };
-      }
-
-      if (curr.definition.direction === "asc") {
-        return {
-          ...curr,
-          definition: { param, direction: "desc", icon: faSortDown },
-        };
-      }
-
-      return {
-        ...curr,
-        definition: null,
-      };
-    });
-  };
-
-  return { sorted, handleSort };
 };
 
 export const Table = <T extends object>({

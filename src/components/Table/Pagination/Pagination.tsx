@@ -32,14 +32,16 @@ export const Pagination = ({
   };
   return (
     <div>
-      <button onClick={previousPage}>Previous</button>
+      {numberOfPages > 0 ? (
+        <button onClick={previousPage}>Previous</button>
+      ) : null}
       {numberOfPagesArray.map((item) => (
         <button key={item} onClick={() => handleChangePage(item)}>
           {typeof item === "string" ? item : item + 1}
         </button>
       ))}
 
-      <button onClick={nextPage}>Next</button>
+      {numberOfPages > 0 ? <button onClick={nextPage}>Next</button> : null}
     </div>
   );
 };

@@ -1,15 +1,5 @@
-import { Table } from "..";
-
-const employeeFieldsTable = [
-  { label: "First Name", param: "firstName" },
-  { label: "Last Name", param: "lastName", type: "string" },
-];
 function App() {
-  return (
-    <>
-      <Table columns={employeeFieldsTable} datas={[]} />
-    </>
-  );
+  return <>valclmb-react-table</>;
 }
 
 export default App;

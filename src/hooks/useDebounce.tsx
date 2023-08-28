@@ -1,5 +1,12 @@
 import { useRef } from "react";
 
+/**
+ * useDebounce
+ * description - debounce function
+ * @param callback - callback function
+ * @param time - time in ms
+ * @returns  onDebounce - debounce function
+ */
 export const useDebounce = (
   callback: (value: string) => void,
   time: number

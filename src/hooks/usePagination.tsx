@@ -1,5 +1,28 @@
 import { useState } from "react";
 
+/**
+ * description - pagination function
+ * @param datas - datas to paginate
+ * @returns  pageDatas - datas for the current page
+ * @returns  pageLength - number of items per page
+ * @returns  changePageLength - function to change the number of items per page
+ * @returns  currentPage - current page
+ * @returns  setCurrentPage - function to change the current page
+ * @returns  minPageItem - min item for the current page
+ * @returns  maxPageItem - max item for the current page
+ * @returns  numberOfPages - number of pages
+ * @example
+ * const {
+ *  pageDatas,
+ *  pageLength,
+ * changePageLength,
+ * currentPage,
+ * setCurrentPage,
+ * minPageItem,
+ * maxPageItem,
+ * numberOfPages,
+ *  } = usePagination(datas);
+ */
 export const usePagination = <T extends object>(datas: T[]) => {
   const [pageLength, setPageLength] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);

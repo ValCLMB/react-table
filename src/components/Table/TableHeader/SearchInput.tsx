@@ -6,7 +6,7 @@ type SearchInputProps = {
 
 /**
  * description - search input component for a table
- * @param setSearch - function to set the search value
+ * @param {function} setSearch - function to set the search value
  * @example
  * <SearchInput
  * setSearch={setSearch}

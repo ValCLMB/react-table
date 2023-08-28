@@ -2,8 +2,8 @@ import { TableProps } from "../Table";
 
 /**
  * description - component to display the body of a table
- * @param datas - datas to display
- * @param columns - columns to display
+ * @param {object} datas - datas to display
+ * @param {object} columns - columns to display
  * @example
  * <TableBody
  * datas={datas}

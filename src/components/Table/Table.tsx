@@ -25,6 +25,19 @@ export type TableProps<T> = {
   range?: number[];
 };
 
+/**
+ * description - table component with pagination, search and sort
+ * @param {object} columns - columns of the table
+ * @param {object} datas - datas of the table
+ * @param {array} range - range of the select
+ * @example
+ * <Table
+ * columns={columns}
+ * datas={datas}
+ * range={[10, 25, 50, 100]}
+ * />
+ */
+
 export const Table = <T extends object>({
   columns,
   datas = [],
@@ -39,7 +52,6 @@ export const Table = <T extends object>({
     minPageItem,
     maxPageItem,
     numberOfPages,
-    currentPage,
     setCurrentPage,
   } = usePagination(filteredDatas);
 
@@ -68,7 +80,6 @@ export const Table = <T extends object>({
           minPageItem={minPageItem}
         />
         <Pagination
-          currentPage={currentPage}
           setCurrentPage={setCurrentPage}
           numberOfPages={numberOfPages}
         />

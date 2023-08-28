@@ -7,9 +7,9 @@ type SelectPaginationProps = {
 // describe this component
 /**
  * description - select page length component for a table
- * @param pageLength - number of items per page
- * @param changePageLength - function to change the number of items per page
- * @param range - range of the select
+ * @param {number} pageLength - number of items per page
+ * @param {function} changePageLength - function to change the number of items per page
+ * @param {array} range - range of the select
  * @example
  * <SelectPageLength
  * pageLength={pageLength}

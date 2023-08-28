@@ -5,8 +5,8 @@ type PaginationProps = {
 
 /**
  * description - pagination component for a table
- * @param setCurrentPage - function to change the current page
- * @param numberOfPages - number of pages
+ * @param {function} setCurrentPage - function to change the current page
+ * @param {number} numberOfPages - number of pages
  * @example
  * <Pagination
  * setCurrentPage={setCurrentPage}

@@ -10,10 +10,10 @@ type HeaderCellProps = {
 
 /**
  * description - header cell component for a table
- * @param label - label of the cell
- * @param param - param of the cell
- * @param sortedDefinition - sorted definition of the table
- * @param handleSort - function to sort the table
+ * @param {string} label - label of the cell
+ * @param {string} param - param of the cell
+ * @param {object} sortedDefinition - sorted definition of the table
+ * @param {function} handleSort - function to sort the table
  * @example
  * <HeaderCell
  * label={label}

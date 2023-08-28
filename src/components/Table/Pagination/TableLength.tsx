@@ -5,9 +5,9 @@ type TableLengthProps = {
 };
 /**
  * description - component to display the number of items for the current page
- * @param length - length of the datas
- * @param minPageItem - min item for the current page
- * @param maxPageItem - max item for the current page
+ * @param {number} length - length of the datas
+ * @param {number} minPageItem - min item for the current page
+ * @param {number} maxPageItem - max item for the current page
  * @example
  * <TableLength
  * length={length}

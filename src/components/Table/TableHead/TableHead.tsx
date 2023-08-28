@@ -16,9 +16,9 @@ type TableHeadProps = {
 
 /**
  * description - table head component for a table
- * @param columns - columns of the table
- * @param sortedDefinition - sorted definition of the table
- * @param handleSort - function to sort the table
+ * @param {string} columns - columns of the table
+ * @param {object} sortedDefinition - sorted definition of the table
+ * @param {function} handleSort - function to sort the table
  * @example
  * <TableHead
  * columns={columns}

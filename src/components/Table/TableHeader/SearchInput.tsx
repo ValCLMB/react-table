@@ -3,6 +3,15 @@ import { useDebounce } from "../../../hooks/useDebounce";
 type SearchInputProps = {
   setSearch: (value: string) => void;
 };
+
+/**
+ * description - search input component for a table
+ * @param setSearch - function to set the search value
+ * @example
+ * <SearchInput
+ * setSearch={setSearch}
+ * />
+ */
 export const SearchInput = ({ setSearch }: SearchInputProps) => {
   const onSearch = useDebounce((value) => {
     setSearch(value);

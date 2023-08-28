@@ -1,9 +1,18 @@
 type PaginationProps = {
   setCurrentPage: (value: number | ((prevVar: number) => number)) => void;
-  currentPage: number;
   numberOfPages: number;
 };
 
+/**
+ * description - pagination component for a table
+ * @param setCurrentPage - function to change the current page
+ * @param numberOfPages - number of pages
+ * @example
+ * <Pagination
+ * setCurrentPage={setCurrentPage}
+ * numberOfPages={numberOfPages}
+ * />
+ */
 export const Pagination = ({
   numberOfPages,
   setCurrentPage,

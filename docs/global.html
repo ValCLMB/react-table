@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Global</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Global</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="useDebounce"><span class="type-signature">(constant) </span>useDebounce<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>description - debounce function</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="hooks_useDebounce.tsx.html">hooks/useDebounce.tsx</a>, <a href="hooks_useDebounce.tsx.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="usePagination"><span class="type-signature">(constant) </span>usePagination<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>description - pagination function</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="hooks_usePagination.tsx.html">hooks/usePagination.tsx</a>, <a href="hooks_usePagination.tsx.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const {
+ pageDatas,
+ pageLength,
+changePageLength,
+currentPage,
+setCurrentPage,
+minPageItem,
+maxPageItem,
+numberOfPages,
+ } = usePagination(datas);</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="useSearch"><span class="type-signature">(constant) </span>useSearch<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>description - search function for an array of objects filtering on all the values of the objects</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="hooks_useSearch.tsx.html">hooks/useSearch.tsx</a>, <a href="hooks_useSearch.tsx.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const { filteredDatas, setSearch } = useSearch(datas);</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="useSort"><span class="type-signature">(constant) </span>useSort<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>description - sort function for an array of objects sorting on all the values of the objects</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="hooks_useSort.tsx.html">hooks/useSort.tsx</a>, <a href="hooks_useSort.tsx.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const { sorted, handleSort } = useSort(datas);</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="HeaderCell.html">HeaderCell</a></li><li><a href="Pagination.html">Pagination</a></li><li><a href="SearchInput.html">SearchInput</a></li><li><a href="SelectPageLength.html">SelectPageLength</a></li><li><a href="Table.html">Table</a></li><li><a href="TableBody.html">TableBody</a></li><li><a href="TableHead.html">TableHead</a></li><li><a href="TableLength.html">TableLength</a></li></ul><h3>Global</h3><ul><li><a href="global.html#useDebounce">useDebounce</a></li><li><a href="global.html#usePagination">usePagination</a></li><li><a href="global.html#useSearch">useSearch</a></li><li><a href="global.html#useSort">useSort</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Mon Aug 28 2023 21:19:17 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

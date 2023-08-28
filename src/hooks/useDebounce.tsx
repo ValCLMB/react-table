@@ -1,10 +1,9 @@
 import { useRef } from "react";
 
 /**
- * useDebounce
  * description - debounce function
- * @param callback - callback function
- * @param time - time in ms
+ * @param {function} callback - callback function
+ * @param {number} time - time in ms
  * @returns  onDebounce - debounce function
  */
 export const useDebounce = (

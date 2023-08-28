@@ -9,7 +9,7 @@ type Sorted<T> = {
 
 /**
  * description - sort function for an array of objects sorting on all the values of the objects
- * @param datas - datas to sort
+ * @param {object} datas - datas to sort
  * @returns  sorted - sorted datas
  * @returns  handleSort - function to sort datas
  * @example

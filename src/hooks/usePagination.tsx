@@ -2,8 +2,8 @@ import { useState } from "react";
 
 /**
  * description - pagination function
- * @param datas - datas to paginate
- * @returns  pageDatas - datas for the current page
+ * @param {object} datas - datas to paginate
+ * @returns pageDatas - datas for the current page
  * @returns  pageLength - number of items per page
  * @returns  changePageLength - function to change the number of items per page
  * @returns  currentPage - current page

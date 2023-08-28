@@ -2,7 +2,7 @@ import { useState } from "react";
 
 /**
  * description - search function for an array of objects filtering on all the values of the objects
- * @param {T[]} datas - array of objects
+ * @param {object} datas - array of objects
  * @returns {filteredDatas, setSearch} - filteredDatas is an array of objects, setSearch is a function
  * @example
  * const { filteredDatas, setSearch } = useSearch(datas);

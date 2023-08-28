@@ -1,5 +1,15 @@
 import { TableProps } from "../Table";
 
+/**
+ * description - component to display the body of a table
+ * @param datas - datas to display
+ * @param columns - columns to display
+ * @example
+ * <TableBody
+ * datas={datas}
+ * columns={columns}
+ * />
+ */
 export const TableBody = <T extends object>({
   datas,
   columns,

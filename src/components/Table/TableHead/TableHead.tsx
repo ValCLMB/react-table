@@ -14,6 +14,19 @@ type TableHeadProps = {
   handleSort: (value: string) => void;
 };
 
+/**
+ * description - table head component for a table
+ * @param columns - columns of the table
+ * @param sortedDefinition - sorted definition of the table
+ * @param handleSort - function to sort the table
+ * @example
+ * <TableHead
+ * columns={columns}
+ * sortedDefinition={sortedDefinition}
+ * handleSort={handleSort}
+ * />
+ */
+
 export const TableHead = ({
   columns,
   sortedDefinition,

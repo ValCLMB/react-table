@@ -7,6 +7,21 @@ type HeaderCellProps = {
   param: string;
   handleSort: (param: string) => void;
 };
+
+/**
+ * description - header cell component for a table
+ * @param label - label of the cell
+ * @param param - param of the cell
+ * @param sortedDefinition - sorted definition of the table
+ * @param handleSort - function to sort the table
+ * @example
+ * <HeaderCell
+ * label={label}
+ * param={param}
+ * sortedDefinition={sortedDefinition}
+ * handleSort={handleSort}
+ * />
+ */
 export const HeaderCell = ({
   label,
   param,

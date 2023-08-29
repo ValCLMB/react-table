@@ -5,7 +5,6 @@ type PaginationProps = {
 
 /**
  * description - pagination component for a table
- * @component
  * @param {function} setCurrentPage - function to change the current page
  * @param {number} numberOfPages - number of pages
  * @example
@@ -13,6 +12,7 @@ type PaginationProps = {
  * setCurrentPage={setCurrentPage}
  * numberOfPages={numberOfPages}
  * />
+ * @returns {React.ReactElement}
  */
 export const Pagination = ({
   numberOfPages,

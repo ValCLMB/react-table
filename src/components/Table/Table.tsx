@@ -27,7 +27,6 @@ export type TableProps<T> = {
 
 /**
  * description - table component with pagination, search and sort
- * @component
  * @param {object} columns - columns of the table
  * @param {object} datas - datas of the table
  * @param {array} range - range of the select
